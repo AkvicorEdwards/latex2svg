@@ -40,7 +40,7 @@ http://172.16.1.206:8080/?latex=\left\{%20\begin{array}{c}%20\cot{\alpha}=\frac{
 
 ## 清除缓存
 
-渲染成功后的svg都会保留下来，可以通过发起GET请求来清除。
+渲染成功后的svg都会保留下来，以便下次请求相同公式时快速响应。若需要清理时，可以通过发起GET请求来清除。
 
 GET方法，`/clear?key=clear_key`。请求时需要提供正确的key，key的值可以在`def.go`中设置
 
@@ -62,4 +62,9 @@ apt-get -y install pdf2svg
 apt-get -y install golang-1.18
 ln -s /usr/lib/go-1.18/bin/go /usr/bin/go
 ln -s /usr/lib/go-1.18/bin/gofmt /usr/bin/gofmt
+# 编译运行，使用git或手动下载zip并解压
+git clone https://github.com/AkvicorEdwards/latex2svg
+cd latex2svg
+go build
+./latex2svg
 ```
