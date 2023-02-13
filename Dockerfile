@@ -9,6 +9,7 @@ RUN apt-get -y install latex-cjk-chinese
 #RUN apt-get -y install git
 
 WORKDIR /wp
+RUN mkdir -p /wp/config
 
 #RUN mkdir -p /wp/dl
 #RUN cd /wp/dl && git clone https://github.com/AkvicorEdwards/latexrender
@@ -18,4 +19,5 @@ COPY . /wp/dl/latexrender
 
 RUN cd /wp/dl/latexrender && go build && mv latexrender /wp/latexrender
 
-CMD ["./latexrender"]
+CMD ["./latexrender","-c","/wp/config/config.ini","-k","random"]
+
