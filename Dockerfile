@@ -1,9 +1,6 @@
 FROM golang:1.18.10-bullseye
 
 RUN apt-get update
-RUN apt-get -y install software-properties-common
-RUN apt-get update
-RUN apt-get -y install --no-install-recommends apt-utils
 RUN apt-get -y install texlive
 RUN apt-get -y install texlive-extra-utils
 RUN apt-get -y install latexmk
@@ -21,4 +18,4 @@ COPY . /wp/dl/latexrender
 
 RUN cd /wp/dl/latexrender && go build && mv latexrender /wp/latexrender
 
-CMD ["./latexrender", "-k", "empty"]
+CMD ["./latexrender"]

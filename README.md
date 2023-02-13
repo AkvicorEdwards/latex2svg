@@ -170,6 +170,7 @@ go build
 ```shell
 docker run -d -p 8080:8080 --name latexrender \
     --restart=always \
+    -v "/path/to/config.ini:/wp/config.ini" \
     akvicor/latexrender:latest
 ```
 
