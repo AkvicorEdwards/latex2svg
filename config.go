@@ -42,7 +42,7 @@ func Load(c string, key string) {
 		cfg = ini.Empty()
 		config.Addr = "0.0.0.0"
 		config.Port = 8080
-		config.BashPath = "/usr/bin/sh"
+		config.BashPath = "/bin/sh"
 		config.Workspace = "./workspace"
 		config.ScriptTimeout = 15
 		if key == "random" {

@@ -1,4 +1,4 @@
-module latex2svg
+module latexrender
 
 go 1.18
 
