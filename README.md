@@ -139,9 +139,6 @@ GET方法，`/clear/temp?key=zm8oj9R`。请求时需要提供正确的key
 ```shell
 # latex渲染依赖
 apt-get update
-apt-get -y install software-properties-common
-apt-get update
-apt-get -y install --no-install-recommends apt-utils
 apt-get -y install git
 apt-get -y install texlive
 apt-get -y install texlive-extra-utils
