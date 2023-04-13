@@ -6,6 +6,10 @@ import "fmt"
 func latexMath(s string) string {
 	return fmt.Sprintf(`\documentclass{article}
 \usepackage[UTF8]{CJK}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{booktabs}
 \begin{document}
 \thispagestyle{empty}
 \begin{CJK*}{UTF8}{gbsn}
@@ -19,6 +23,10 @@ $
 func latexCJK(s string) string {
 	return fmt.Sprintf(`\documentclass{article}
 \usepackage[UTF8]{CJK}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{booktabs}
 \begin{document}
 \thispagestyle{empty}
 \begin{CJK*}{UTF8}{gbsn}
@@ -30,6 +38,10 @@ func latexCJK(s string) string {
 func latexDoc(s string) string {
 	return fmt.Sprintf(`\documentclass{article}
 \usepackage[UTF8]{CJK}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{booktabs}
 \begin{document}
 %s
 \end{document}`, s)
